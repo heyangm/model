@@ -48,7 +48,7 @@
 				<a href="javascript:;" class="check-but" :class="{'check':checkAllFlag}" @click="checkAll"></a>
 			</div>
 			<div class="itemtotal">{{totalMoney | formatMoney}}</div>
-			<div><a href="">结算</a></div>
+			<div><router-link to='/address'>结算</router-link></div>
 	</div>
 </template>
 <script>

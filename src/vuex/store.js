@@ -13,6 +13,9 @@ export default new Vuex.Store({
 		cartNub :0,
 		checkAllFlag:false,
 		delFlag:false,
+		addrList:[],
+		limitNub:3,
+		currentIndex:0,
 	},
 	getters : {
 		productList : state => state.productList ,

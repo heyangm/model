@@ -30,21 +30,31 @@
 		.addr-list li div{display: inline-block;margin: 10px;}
 		.addr-list .check{border-color: #D84C29;}
 	</style>
-<script>
-	import { mapGetters,mapActions} from 'vuex'
-	export default {
-		data (){
-			return{
-				limitNub:3,
-				currentIndex:0,
-			}
-		}		
+	<script>
+		export default{
+			data:{
+		addrList:[],
+		limitNub:3,
+		currentIndex:0,
 	},
-		computed:mapGetters([
-			'addrList'
-		]),
-		methods:{
-			addAll: function(){
+	computed:{
+		filterAddr: function(){
+			return this.addrList.slice(0,this.limitNub)//js中数组方法 取3个
+		}
+	},
+	mounted:function(){
+		this.$nextTick(function(){
+			this.addrView();
+			})
+	},
+	methods:{
+		addrView: function(){
+			var _this= this;
+			this.$http.get("data/address.json").then(function(res){
+				_this.addrList = res.body.result;
+			})
+		},
+		addAll: function(){
 			this.limitNub = this.addrList.length
 		},
 		setDefault: function (addressId) {
@@ -56,6 +66,6 @@
 				}
 			});
 		}
-		}
 	}
-</script>
+		}
+	</script>
