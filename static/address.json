@@ -1,0 +1,46 @@
+{
+	"status": 0 ,
+	"message":"",
+	"result":[
+		{
+			"addressId":"10001",
+			"userName" :"hymhym",
+			"streetName":"杭州滨江",
+			"postCode":"10001",
+			"tel":"1865479111",
+			"isDefault":true
+		},
+		{
+			"addressId":"10002",
+			"userName" :"hym22",
+			"streetName":"杭州滨江",
+			"postCode":"10002",
+			"tel":"1865479222",
+			"isDefault":false
+		},
+		{
+			"addressId":"10003",
+			"userName" :"hym33",
+			"streetName":"杭州滨江",
+			"postCode":"10003",
+			"tel":"1865479333",
+			"isDefault":false
+		},
+		{
+			"addressId":"10004",
+			"userName" :"hym44",
+			"streetName":"杭州滨江",
+			"postCode":"10004",
+			"tel":"1865479344",
+			"isDefault":false
+		},
+		{
+			"addressId":"10005",
+			"userName" :"hym55",
+			"streetName":"杭州滨江",
+			"postCode":"10005",
+			"tel":"1865479555",
+			"isDefault":false
+		}
+	]
+}

@@ -25,3 +25,37 @@
 		</div>		
 	</div>
 </template>
+<style>
+		.addr-list li{display:inline-block;margin: 0 10px;padding: 10px;border: 1px #999 solid;vertical-align: middle;}
+		.addr-list li div{display: inline-block;margin: 10px;}
+		.addr-list .check{border-color: #D84C29;}
+	</style>
+<script>
+	import { mapGetters,mapActions} from 'vuex'
+	export default {
+		data (){
+			return{
+				limitNub:3,
+				currentIndex:0,
+			}
+		}		
+	},
+		computed:mapGetters([
+			'addrList'
+		]),
+		methods:{
+			addAll: function(){
+			this.limitNub = this.addrList.length
+		},
+		setDefault: function (addressId) {
+			this.addrList.forEach(function (address,index) {
+				if(address.addressId == addressId){
+					address.isDefault = true;
+				}else{
+					address.isDefault = false
+				}
+			});
+		}
+		}
+	}
+</script>
